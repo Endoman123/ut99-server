@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker image build --no-cache .
+      run: docker build --no-cache -t endoman123/yolk-ut99 .
     - name: Docker login
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}

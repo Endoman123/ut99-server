@@ -11,9 +11,6 @@ RUN dpkg --add-architecture i386 \
     && dpkg-reconfigure --frontend noninteractive locales \
     && useradd -m -d /home/container -s /bin/bash container
 
-# Create a link of this file to the missing file
-RUN ln -s /ut-server/System/libSDL-1.1.so.0 /ut-server/System/libSDL-1.2.so.0
-
 USER        container
 ENV         USER=container HOME=/home/container
 ENV         DEBIAN_FRONTEND noninteractive

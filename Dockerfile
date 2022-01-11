@@ -8,8 +8,8 @@ RUN dpkg --add-architecture i386 \
     && apt upgrade -y \
     && apt install -y curl wget file tar bzip2 gzip unzip bsdmainutils python3 util-linux ca-certificates binutils bc jq tmux netcat lib32gcc1 lib32stdc++6 \
     && update-locale lang=en_US.UTF-8 \
-	&& dpkg-reconfigure --frontend noninteractive locales \
-	&& useradd -m -d /home/container -s /bin/bash container
+    && dpkg-reconfigure --frontend noninteractive locales \
+    && useradd -m -d /home/container -s /bin/bash container
 
 # Create a link of this file to the missing file
 RUN ln -s /ut-server/System/libSDL-1.1.so.0 /ut-server/System/libSDL-1.2.so.0

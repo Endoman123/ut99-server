@@ -17,6 +17,6 @@ jobs:
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
       run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Docker push
-      run: docker push roemer/ut99-server:latest
+      run: docker push endoman123/yolk-ut99:latest
     - name: Docker logout
       run: docker logout
